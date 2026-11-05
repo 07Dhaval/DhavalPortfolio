@@ -17,6 +17,7 @@ export default function MotionCursor() {
       node.style.transform = `translate3d(${left}px,${top}px,0)`;
     };
     const hover = (target) => {
+      layer.classList.toggle("cursor-contact", !!target?.closest(".contact-section"));
       ringNode.classList.toggle("cursor-hover", !!target?.closest("a,button"));
       ringNode.classList.toggle("cursor-project", !!target?.closest(".project-image"));
     };

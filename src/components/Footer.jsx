@@ -7,7 +7,7 @@ export default function Footer() {
       <a className="brand" href="#home">
         VD<span>©</span>
       </a>
-      <p>
+      <p className="font-bold">
         © {new Date().getFullYear()} Dhaval Valvi. Built with React & Tailwind
         CSS.
       </p>

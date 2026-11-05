@@ -16,7 +16,6 @@ export default function App() {
   const [menu, setMenu] = useState(false),
     [filter, setFilter] = useState("All work"),
     [selected, setSelected] = useState(null),
-    [copied, setCopied] = useState(false),
     [faq, setFaq] = useState(null);
   useEffect(() => {
     const o = new IntersectionObserver(
@@ -46,15 +45,6 @@ export default function App() {
       window.removeEventListener("keydown", close);
     };
   }, [selected]);
-  const copy = async () => {
-    try {
-      await navigator.clipboard.writeText("dhavalvalvi7@gmail.com");
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2200);
-    } catch {
-      location.href = "mailto:dhavalvalvi7@gmail.com";
-    }
-  };
   return (
     <>
       <MotionCursor />
@@ -72,7 +62,7 @@ export default function App() {
         <Skills />
         <Experience />
         <Services faq={faq} setFaq={setFaq} />
-        <Contact copy={copy} copied={copied} />
+        <Contact />
       </main>
       <Footer />
       <ProjectModal selected={selected} setSelected={setSelected} />

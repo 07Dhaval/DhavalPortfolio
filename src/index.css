@@ -786,11 +786,24 @@ h2 {
   stroke-width: 1.5;
 }
 .contact-bottom {
+  --contact-value-size: 18px;
   border-top: 1px solid #9fb56470;
   padding-top: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+.contact-email {
+  min-width: 0;
+}
+.contact-whatsapp {
+  justify-self: center;
+  text-align: center;
+}
+.contact-phone {
+  justify-self: end;
+  text-align: right;
 }
 .contact-label {
   font-size: 8px;
@@ -805,20 +818,111 @@ h2 {
   gap: 15px;
 }
 .email-row > a {
-  font-size: 22px;
-  letter-spacing: -0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+.email-row > a,
+.whatsapp-link,
+.phone {
+  font-size: var(--contact-value-size);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.2px;
 }
 .email-row button {
   padding: 8px;
 }
-.copy-status {
-  font-size: 10px;
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.copy-email {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border: 1px solid #1c281144;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+.copy-email:hover {
+  background: #1c281112;
+}
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 16px;
+  border-radius: 30px;
+  background: #202c15;
+  color: #d8ed93;
+  transition: background 0.2s;
+}
+.whatsapp-link:hover {
+  background: #354725;
+}
+.whatsapp-link .contact-icon {
+  width: 24px;
+  height: 24px;
 }
 .phone {
-  font-size: 12px;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
+  justify-content: end;
+}
+.contact-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  z-index: 150;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: max-content;
+  max-width: calc(100% - 32px);
+  padding: 14px 16px;
+  border: 1px solid #d8ed9355;
+  border-radius: 12px;
+  background: #202c15;
+  color: #f2f7df;
+  box-shadow: 0 12px 40px #0005;
+  font-size: 14px;
+  animation: contact-toast-in 0.18s ease-out;
+}
+.contact-toast > svg {
+  color: #d8ed93;
+  flex-shrink: 0;
+}
+.contact-toast > button {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  padding: 6px;
+  border-radius: 50%;
+}
+.contact-toast > button:hover {
+  background: #ffffff14;
+}
+@keyframes contact-toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+@media (max-width: 360px) {
+  .contact-bottom {
+    --contact-value-size: 16px;
+  }
 }
 footer {
   display: flex;
@@ -986,8 +1090,19 @@ footer p {
     height: 70px;
     width: 70px;
   }
-  .email-row > a {
-    font-size: 19px;
+  .contact-bottom {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .contact-email,
+  .contact-whatsapp,
+  .contact-phone {
+    justify-self: center;
+    text-align: center;
+  }
+  .email-row,
+  .phone {
+    justify-content: center;
   }
 }
 @media (max-width: 760px) {
@@ -1250,22 +1365,14 @@ footer p {
     height: 24px;
   }
   .contact-bottom {
-    display: block;
+    display: grid;
     padding-top: 24px;
-  }
-  .email-row > a {
-    font-size: clamp(16px, 4.7vw, 23px);
-    letter-spacing: -0.5px;
   }
   .email-row {
     gap: 5px;
   }
   .phone {
-    margin-top: 25px;
-  }
-  .copy-status {
-    position: absolute;
-    margin-top: 50px;
+    margin-top: 0;
   }
   .contact-label {
     font-size: 8px;
@@ -1643,7 +1750,7 @@ html {
   border-bottom-color: #ffffff12;
 }
 .brand {
-  color: #eef1e7;
+  color: #d8f36a;
 }
 .desktop-nav {
   color: #a2aa98;
@@ -2204,6 +2311,17 @@ footer p {
 }
 .cursor-project > span {
   opacity: 1;
+}
+.cursor-contact .cursor-ring:before {
+  border-color: #1c2811e6;
+  box-shadow: 0 0 0 1px #d8ed9380;
+}
+.cursor-contact .cursor-dot:before {
+  background: #1c2811;
+  box-shadow: 0 0 0 1px #d8ed93;
+}
+.cursor-contact .cursor-hover:before {
+  background: #1c28111f;
 }
 @keyframes rise-in {
   from {
