@@ -50,7 +50,7 @@ src/
     Hero.jsx                Hero, portrait and 3D tilt
     TechStrip.jsx           Technology strip
     Projects.jsx            All 11 projects and category filters
-    DeviceMockup.jsx        Screenshot-based 3D laptop
+    DeviceMockup.jsx        Responsive laptop mockups
     ProjectModal.jsx        Project details and available live links
     About.jsx               About and resume download
     Skills.jsx              Skill groups

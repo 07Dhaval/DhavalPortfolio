@@ -35,7 +35,7 @@ export default function Services({ faq, setFaq }) {
           ],
           [
             Globe,
-            "Business & commerce websites",
+            "Business & E-commerce websites",
             "Company websites, product catalogues and shopping experiences that bring your business online.",
           ],
         ].map(([Icon, t, d], i) => (

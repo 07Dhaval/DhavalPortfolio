@@ -7,7 +7,7 @@ export default function DeviceMockup({ project, large = false }) {
           <div className="device-camera" />
           <div className="device-screen">
             <img
-              src={"/images/" + project.id + ".png"}
+              src={"/images/" + (project.image ?? project.id) + ".png"}
               alt={project.name + " website in a laptop mockup"}
               loading={large ? "eager" : "lazy"}
             />

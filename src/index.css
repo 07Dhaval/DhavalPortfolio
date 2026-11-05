@@ -1368,30 +1368,24 @@ footer p {
     object-position: center 15%;
   }
 }
-/* Screenshot-based laptop mockups: the original work stays pixel-accurate. */
+/* Fit the complete laptop and screenshot within each card or modal. */
 .device-scene {
   width: 100%;
   height: 100%;
-  position: relative;
+  position: absolute;
+  inset: 0;
+  padding: 48px 24px 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 1200px;
+  container-type: size;
   pointer-events: none;
 }
 .laptop {
   position: relative;
-  width: 83%;
-  transform: rotateX(10deg) rotateY(-12deg) rotateZ(-3deg) translateY(7px);
-  transform-style: preserve-3d;
-  transition: transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-.project:nth-child(even) .laptop {
-  transform: rotateX(10deg) rotateY(12deg) rotateZ(3deg) translateY(7px);
-}
-.project-image:hover .laptop {
-  transform: rotateX(2deg) rotateY(0deg) rotateZ(0deg) translateY(-5px)
-    scale(1.035);
+  /* Account for the wider base, bezel and base height in both dimensions. */
+  width: min(84cqw, calc((100cqh - 34px) * 2.05 + 16px));
+  flex-shrink: 0;
 }
 .laptop-lid {
   background: linear-gradient(
@@ -1432,8 +1426,8 @@ footer p {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top;
+  object-fit: contain;
+  object-position: center;
   transform: none !important;
   filter: none;
   border-radius: 0;
@@ -1497,27 +1491,49 @@ footer p {
   letter-spacing: 1.5px;
 }
 .project-image {
+  padding: 0;
   aspect-ratio: 1.4;
+  transition: border-color 0.35s, box-shadow 0.35s;
   background-image: radial-gradient(
     ellipse at 35% 25%,
     #ffffff55,
     transparent 70%
   ) !important;
 }
+.project-image .laptop {
+  transform-origin: center;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.project-image .laptop-lid {
+  transition: border-color 0.35s, box-shadow 0.35s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .project-image:hover {
+    border-color: #d8f36a80;
+    box-shadow: inset 0 0 36px #d8f36a0d;
+  }
+  .project-image:hover .laptop-lid {
+    border-color: #d8f36a99;
+    box-shadow: 0 0 0 1px #d8f36a20, 0 12px 28px #0005;
+  }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .project-image:hover .laptop {
+    transform: scale(1.03);
+  }
+}
 .project-detail-link {
   padding: 5px;
   border-bottom: 1px solid #cdd1c0;
 }
 .modal-image {
+  position: relative;
+  padding: 0;
   height: 340px;
   overflow: hidden;
 }
 .modal-image .device-scene {
-  height: 100%;
-}
-.modal-image .laptop {
-  width: 80%;
-  transform: rotateX(8deg) rotateY(-6deg) rotateZ(-2deg);
+  padding: 56px 24px 24px;
 }
 .modal-image .mockup-caption {
   display: none;
@@ -1547,12 +1563,8 @@ footer p {
     grid-column: auto;
     max-width: none;
   }
-  .laptop {
-    width: 84%;
-    transform: rotateX(8deg) rotateY(-8deg) rotateZ(-3deg);
-  }
-  .project:nth-child(even) .laptop {
-    transform: rotateX(8deg) rotateY(8deg) rotateZ(3deg);
+  .device-scene {
+    padding: 42px 16px 48px;
   }
   .project-image {
     aspect-ratio: 1.3;
@@ -1581,7 +1593,6 @@ footer p {
   }
   .modal-image {
     height: 230px;
-    padding: 4px;
   }
   .project-image .project-label {
     font-size: 7px;

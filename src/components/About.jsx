@@ -34,7 +34,7 @@ export default function About() {
           <p>
             I hold an MSc in Computer Application and Information Technology. I
             bring a quick-learning mindset, clear communication and a
-            collaborative approach to the work I do.
+            collaborative approach to the work i do.
           </p>
           <div className="about-facts">
             <div>

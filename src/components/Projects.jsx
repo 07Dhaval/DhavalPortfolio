@@ -2,7 +2,6 @@ import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "../data/portfolio";
 import DeviceMockup from "./DeviceMockup";
-import { tilt, resetTilt } from "../utils/tilt";
 
 export default function Projects({ filter, setFilter, setSelected }) {
   return (
@@ -46,8 +45,6 @@ export default function Projects({ filter, setFilter, setSelected }) {
             <article className="project" key={p.id}>
               <button
                 className="project-image"
-                onPointerMove={tilt}
-                onPointerLeave={resetTilt}
                 style={{ "--mockup-color": p.color }}
                 onClick={() => setSelected(p)}
                 aria-label={"View " + p.name + " project"}

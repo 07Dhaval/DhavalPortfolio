@@ -11,28 +11,6 @@ export const projects = [
     color: "#dce5ed",
   },
   {
-    id: "herbal",
-    name: "Magical Herbal Care",
-    type: "Commerce",
-    label: "02 / E-COMMERCE",
-    description:
-      "A full-stack shopping experience with product discovery, cart, checkout and an admin panel.",
-    tags: ["MERN stack", "Razorpay", "Admin dashboard"],
-    url: "https://magicalherbalcare.com/",
-    color: "#e4e6d8",
-  },
-  {
-    id: "bluecone",
-    name: "Blue Cone Construction",
-    type: "Business",
-    label: "03 / CONSTRUCTION & INFRASTRUCTURE",
-    description:
-      "A construction company website with a bold infrastructure hero and an overlay navigation.",
-    tags: ["React", "Tailwind CSS", "Responsive website"],
-    url: null,
-    color: "#dbe6ec",
-  },
-  {
     id: "travel",
     name: "Mica’s Travel Agency",
     type: "Travel",
@@ -44,6 +22,18 @@ export const projects = [
     color: "#d5e7e4",
   },
   {
+    id: "bluecone",
+    name: "Blue Cone Construction",
+    type: "Business",
+    label: "03 / CONSTRUCTION & INFRASTRUCTURE",
+    description:
+      "A construction company website with a bold infrastructure hero and an overlay navigation.",
+    tags: ["React", "Tailwind CSS", "Responsive website"],
+    url: "https://blue-cone-construction.vercel.app/",
+    color: "#dbe6ec",
+  },
+  
+  {
     id: "epidermis",
     name: "Epidermis",
     type: "Business",
@@ -51,7 +41,7 @@ export const projects = [
     description:
       "A skincare website featuring a warm visual identity, treatment discovery and consultation calls to action.",
     tags: ["HTML", "Tailwind CSS", "GSAP"],
-    url: null,
+    url: "https://epidermis-zeta.vercel.app/",
     color: "#e9dcd2",
   },
   {
@@ -62,52 +52,8 @@ export const projects = [
     description:
       "A garment export website presenting collections, export services, manufacturing and certifications.",
     tags: ["Web development", "Node.js", "MongoDB"],
-    url: null,
+    url: "https://jalagarment.vercel.app/",
     color: "#dfe5e8",
-  },
-  {
-    id: "hypervoid",
-    name: "Hyper Void",
-    type: "Web3",
-    label: "07 / WEB3 & TOKEN WEBSITE",
-    description:
-      "An expressive token website with a black-hole hero, animated clouds, roadmap and staking pages.",
-    tags: ["HTML", "Tailwind CSS", "GSAP"],
-    url: null,
-    color: "#dfe5c6",
-  },
-  {
-    id: "quantara",
-    name: "Quantara",
-    type: "Web3",
-    label: "08 / BLOCKCHAIN ECOSYSTEM",
-    description:
-      "A dark, atmospheric website introducing a decentralized digital ecosystem and its core capabilities.",
-    tags: ["Landing page", "UI development"],
-    url: null,
-    color: "#dfdced",
-  },
-  {
-    id: "defichain",
-    name: "DeFiChain",
-    type: "Web3",
-    label: "09 / CRYPTO LANDING PAGE",
-    description:
-      "A dark blue crypto landing page with dimensional coin imagery and a clear product introduction.",
-    tags: ["Landing page", "UI development"],
-    url: null,
-    color: "#dae1ef",
-  },
-  {
-    id: "exostock",
-    name: "ExoStock",
-    type: "Products",
-    label: "10 / INVENTORY MANAGEMENT",
-    description:
-      "An inventory management product website introducing stock, billing, GST invoices and reporting workflows.",
-    tags: ["Product website", "Dashboard showcase"],
-    url: null,
-    color: "#d9e7f1",
   },
   {
     id: "solar",
@@ -119,6 +65,62 @@ export const projects = [
     tags: ["Business website", "Web development"],
     url: "https://vrushtisolarenergy.in/",
     color: "#dce7de",
+  },
+  {
+    id: "herbal",
+    name: "Magical Herbal Care",
+    type: "Commerce",
+    label: "02 / E-COMMERCE",
+    description:
+      "A full-stack shopping experience with product discovery, cart, checkout and an admin panel.",
+    tags: ["MERN stack", "Razorpay", "Admin dashboard"],
+    url: "https://magicalherbalcare.com/",
+    color: "#e4e6d8",
+  },
+  {
+    id: "hypervoid",
+    name: "Hyper Void",
+    type: "Web3",
+    label: "07 / WEB3 & TOKEN WEBSITE",
+    description:
+      "An expressive token website with a black-hole hero, animated clouds, roadmap and staking pages.",
+    tags: ["HTML", "Tailwind CSS", "GSAP"],
+    url: "https://hypervoid-psi.vercel.app/",
+    color: "#dfe5c6",
+  },
+  {
+    id: "quantara",
+    name: "Quantara",
+    type: "Web3",
+    label: "08 / BLOCKCHAIN ECOSYSTEM",
+    description:
+      "A dark, atmospheric website introducing a decentralized digital ecosystem and its core capabilities.",
+    tags: ["Landing page", "UI development"],
+    url: "https://quantara-one.vercel.app/",
+    color: "#dfdced",
+  },
+  {
+    id: "Crypto",
+    image: "defichain",
+    name: "Crypto",
+    type: "Web3",
+    label: "09 / CRYPTO LANDING PAGE",
+    description:
+      "A dark blue crypto landing page with dimensional coin imagery and a clear product introduction.",
+    tags: ["Landing page", "UI development"],
+    url: "https://web1crypto.vercel.app/",
+    color: "#dae1ef",
+  },
+  {
+    id: "exostock",
+    name: "ExoStock",
+    type: "Products",
+    label: "10 / INVENTORY MANAGEMENT",
+    description:
+      "An inventory management product website introducing stock, billing, GST invoices and reporting workflows.",
+    tags: ["Product website", "Dashboard showcase"],
+    url: "https://exo-stock.vercel.app/",
+    color: "#d9e7f1",
   },
 ];
 export const experience = [

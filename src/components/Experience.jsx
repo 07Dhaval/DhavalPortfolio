@@ -43,13 +43,13 @@ export default function Experience() {
           <div>
             <article className="timeline-row reveal">
               <span className="date">Oct 2020 — Apr 2022</span>
-              <h3>MSc · Computer Application & Information Technology</h3>
+              <h3>MSc in Computer Application & Information Technology</h3>
               <p>Natubhai V Patel College of Pure & Applied Science</p>
               <span className="grade">CGPA 8.87</span>
             </article>
             <article className="timeline-row reveal">
               <span className="date">Aug 2017 — Oct 2020</span>
-              <h3>BSc · Information Technology</h3>
+              <h3>BSc in Information Technology</h3>
               <p>Natubhai V Patel College of Pure & Applied Science</p>
               <span className="grade">CGPA 6.49</span>
             </article>
