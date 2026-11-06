@@ -1,3 +1,5 @@
+import maintenexMockup from "../assets/maintenex.png";
+
 export const projects = [
   {
     id: "exotic",
@@ -32,7 +34,19 @@ export const projects = [
     url: "https://blue-cone-construction.vercel.app/",
     color: "#dbe6ec",
   },
-  
+  {
+    id: "maintenex",
+    imageSrc: maintenexMockup,
+    imageType: "mockup",
+    name: "Maintenex Construction",
+    type: "Business",
+    label: "12 / CONSTRUCTION & RESTORATION",
+    description:
+      "A professional renovation and restoration website for a construction company serving the Greater Toronto Area. Built with React and Tailwind CSS, featuring responsive layouts, service navigation, scroll progress and WhatsApp contact.",
+    tags: ["React", "Tailwind CSS", "Responsive website", "Scroll animations"],
+    url: "https://maintenex-tau.vercel.app/",
+    color: "#d7e7ef",
+  },
   {
     id: "epidermis",
     name: "Epidermis",
